@@ -29,12 +29,11 @@ function CountryList() {
     if (queryChange == "") {
       return c;
     } else if (
-      c.name.common.toLowerCase().includes(queryChange.toLowerCase())
+      c.name.common.toLowerCase().includes(queryChange.trim().toLowerCase())
     ) {
       return c;
     }
   });
-  console.log("data.length is", data.length);
   return (
     <>
       <div>
